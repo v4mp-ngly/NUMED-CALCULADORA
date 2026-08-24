@@ -24,6 +24,67 @@
 /* NUMED Clinical Tools additions */
 .appNav{display:flex;gap:10px;justify-content:center;margin:18px auto 8px;position:sticky;top:10px;z-index:40}.appTab{border:1px solid #d8e4ec;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);color:#185781;padding:11px 18px;border-radius:14px;font:700 14px Montserrat,sans-serif;cursor:pointer;box-shadow:0 8px 24px rgba(24,87,129,.08);transition:.22s ease}.appTab:hover{transform:translateY(-2px)}.appTab.active{background:#185781;color:#fff;border-color:#185781}.toolView{animation:viewIn .32s ease}.toolView.hidden{display:none}.productPicker{margin-bottom:18px}.productSearchWrap{position:relative}.productSearch{width:100%;box-sizing:border-box;border:1.5px solid #d8e4ec;border-radius:16px;padding:15px 46px 15px 16px;font:600 15px Montserrat,sans-serif;outline:none;transition:.2s}.productSearch:focus{border-color:#185781;box-shadow:0 0 0 4px rgba(24,87,129,.09)}.searchIcon{position:absolute;right:16px;top:50%;transform:translateY(-50%);pointer-events:none}.productMenu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;max-height:250px;overflow:auto;margin-top:10px;padding:8px;border:1px solid #e1eaf0;border-radius:16px;background:#fff;box-shadow:0 18px 40px rgba(24,87,129,.12)}.productMenu.hidden{display:none}.productOption{border:1px solid #e5edf2;background:#fff;padding:11px 12px;border-radius:12px;text-align:left;font:650 13px Montserrat,sans-serif;color:#24475f;cursor:pointer;transition:.18s}.productOption:hover{border-color:#a9cf38;transform:translateY(-1px);background:#fbfdf6}.selectedProduct{display:none;margin-top:12px;padding:14px 16px;border-radius:16px;background:linear-gradient(135deg,#f5f9fc,#fbfdf6);border:1px solid #dce9ef;align-items:center;gap:12px}.selectedProduct.show{display:flex;animation:popIn .28s ease}.selectedProduct .check{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#a9cf38;color:#173d56;font-weight:900;animation:checkPop .38s ease}.selectedProduct small{display:block;color:#6b7f8d;margin-bottom:2px}.selectedProduct b{color:#185781}.libraryHeader{max-width:900px;margin:22px auto 14px;text-align:center}.libraryHeader h2{color:#185781;margin:0 0 6px}.libraryHeader p{color:#6b7f8d;margin:0}.librarySearch{max-width:720px;margin:18px auto}.libraryGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:1000px;margin:0 auto 40px}.productCard{background:#fff;border:1px solid #e2ebf0;border-radius:18px;padding:16px;box-shadow:0 8px 24px rgba(24,87,129,.06);transition:.22s;animation:cardIn .3s ease both}.productCard:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(24,87,129,.11);border-color:#cddfe9}.productCard .vialIcon{font-size:25px}.productCard h3{margin:8px 0 5px;color:#185781;font-size:15px}.productCard p{margin:0;color:#7b8c97;font-size:12px}.pendingBadge{display:inline-block;margin-top:12px;padding:6px 9px;border-radius:999px;background:#f1f6f8;color:#607985;font-size:10px;font-weight:800}.flowStep.done .stepDot{background:#a9cf38!important;color:#173d56!important;transform:scale(1.08)}.flowStep,.stepDot,.flowArrow{transition:.3s ease}.resultCard,.heroResult{transition:.28s ease}.resultPulse{animation:resultPulse .38s ease}.syringeFill,#fill,#doseMarker{transition:width .55s cubic-bezier(.2,.8,.2,1),left .55s cubic-bezier(.2,.8,.2,1),opacity .2s}.section{animation:sectionIn .4s ease both}@keyframes viewIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}@keyframes sectionIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes popIn{from{opacity:0;transform:scale(.97) translateY(5px)}to{opacity:1;transform:none}}@keyframes checkPop{0%{transform:scale(.4) rotate(-20deg)}70%{transform:scale(1.15)}100%{transform:scale(1)}}@keyframes cardIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}@keyframes resultPulse{50%{transform:scale(1.018)}}@media(max-width:760px){.appNav{top:6px}.appTab{flex:1;padding:10px 8px;font-size:12px}.productMenu{grid-template-columns:1fr}.libraryGrid{grid-template-columns:1fr 1fr}.productSearch{font-size:16px}}@media(max-width:480px){.libraryGrid{grid-template-columns:1fr}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
+
+<style id="numed-motion-upgrade">
+@keyframes numedEnter{0%{opacity:0;transform:translateY(18px) scale(.985)}100%{opacity:1;transform:none}}
+@keyframes numedPop{0%{transform:scale(.96)}55%{transform:scale(1.025)}100%{transform:scale(1)}}
+@keyframes numedPulse{0%,100%{filter:brightness(1)}50%{filter:brightness(1.12)}}
+@keyframes numedShimmer{0%{transform:translateX(-130%)}100%{transform:translateX(230%)}}
+@keyframes numedFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes numedLiquid{0%,100%{transform:translateX(-2px)}50%{transform:translateX(2px)}}
+body{animation:numedEnter .55s cubic-bezier(.2,.8,.2,1) both}
+header,.topbar,.app-header{animation:numedEnter .45s .04s both}
+.card,.panel,.step,.result-card,.product-card{animation:numedEnter .45s both;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.card:hover,.panel:hover,.product-card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(15,63,92,.12)}
+button,.chip,.option,.tab{transition:transform .16s ease,box-shadow .2s ease,background-color .2s ease,border-color .2s ease}
+button:active,.chip:active,.option:active,.tab:active{transform:scale(.965)}
+.selected,.active{animation:numedPop .3s cubic-bezier(.2,.9,.3,1.25)}
+.result-card,.resultHero,.hero-result{position:relative;overflow:hidden}
+.result-card::after,.resultHero::after,.hero-result::after{content:"";position:absolute;inset:0 auto 0 -35%;width:22%;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(255,255,255,.16),transparent);transform:skewX(-18deg);animation:numedShimmer 4.5s ease-in-out infinite}
+#syringe,.syringe,.vial,.vialWrap{transition:transform .35s cubic-bezier(.2,.8,.2,1);will-change:transform}
+.vial,.vialWrap{animation:numedFloat 3.2s ease-in-out infinite}
+.fill,.liquid,.syringeFill{transition:width .55s cubic-bezier(.2,.8,.2,1),height .55s cubic-bezier(.2,.8,.2,1);animation:numedLiquid 2.4s ease-in-out infinite}
+.marker,.needleMarker,.dose-marker{transition:left .55s cubic-bezier(.2,.8,.2,1),transform .25s ease}
+.progress-fill,.progressLine,.step-line::after{transition:width .55s cubic-bezier(.2,.8,.2,1),transform .55s cubic-bezier(.2,.8,.2,1)}
+input:focus,select:focus{transform:translateY(-1px);transition:.2s ease;box-shadow:0 0 0 4px rgba(169,207,56,.14)}
+.motion-flash{animation:numedPop .34s ease,numedPulse .55s ease}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
+</style>
+<style id="numed-motion-max">
+/* Visual motion upgrade only — calculation logic intentionally untouched */
+:root{--ease-spring:cubic-bezier(.16,1,.3,1)}
+body{position:relative;overflow-x:hidden;background:
+radial-gradient(circle at 8% 8%,rgba(169,207,56,.16),transparent 24%),
+radial-gradient(circle at 92% 18%,rgba(24,87,129,.14),transparent 28%),
+linear-gradient(135deg,#f9fcfd,#eef5f8 52%,#f7faef)}
+body:before,body:after{content:"";position:fixed;z-index:-1;border-radius:50%;filter:blur(10px);pointer-events:none;opacity:.55}
+body:before{width:340px;height:340px;left:-150px;top:18%;background:radial-gradient(circle,rgba(169,207,56,.2),transparent 68%);animation:ambientDriftA 12s ease-in-out infinite}
+body:after{width:420px;height:420px;right:-190px;top:48%;background:radial-gradient(circle,rgba(24,87,129,.16),transparent 68%);animation:ambientDriftB 15s ease-in-out infinite}
+.shell{position:relative;isolation:isolate}.shell:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(320px circle at var(--mx,50%) var(--my,12%),rgba(255,255,255,.72),transparent 65%);opacity:.7;z-index:-1;transition:opacity .3s}
+.brand img{animation:brandFloat 4s ease-in-out infinite;filter:drop-shadow(0 8px 16px rgba(24,87,129,.12))}
+.hero{position:relative;overflow:hidden;isolation:isolate;box-shadow:0 22px 70px rgba(24,87,129,.22);animation:heroEnter .75s var(--ease-spring) both}
+.hero:before{content:"";position:absolute;width:330px;height:330px;border-radius:50%;right:-100px;top:-190px;background:radial-gradient(circle,rgba(169,207,56,.35),rgba(169,207,56,.05) 55%,transparent 70%);animation:orbFloat 7s ease-in-out infinite;z-index:-1}
+.hero:after{content:"";position:absolute;inset:-50% auto -50% -25%;width:18%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);transform:skewX(-18deg);animation:heroSweep 6s ease-in-out infinite;pointer-events:none}
+.hero .tag{animation:fadeSlide .55s .15s both}.hero h1{animation:fadeSlide .65s .22s both;text-shadow:0 6px 22px rgba(0,0,0,.12)}.hero p{animation:fadeSlide .65s .31s both}
+.appNav{animation:navDrop .65s .08s var(--ease-spring) both}.appTab{position:relative;overflow:hidden}.appTab:before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 25%,rgba(255,255,255,.34),transparent 75%);transform:translateX(-130%)}.appTab:hover:before{animation:quickSweep .65s ease}.appTab.active{box-shadow:0 10px 28px rgba(24,87,129,.25)}
+.flowStep{position:relative;overflow:hidden;transform-origin:center;animation:stepEnter .5s var(--ease-spring) both}.flowStep:nth-of-type(1){animation-delay:.12s}.flowStep:nth-of-type(3){animation-delay:.2s}.flowStep:nth-of-type(5){animation-delay:.28s}.flowStep:nth-of-type(7){animation-delay:.36s}.flowStep.active{animation:activeStep 2.2s ease-in-out infinite}.flowStep.done{box-shadow:0 8px 24px rgba(169,207,56,.14)}.flowStep.done .stepDot{animation:donePop .48s var(--ease-spring)}.flowArrow{animation:arrowBreathe 1.5s ease-in-out infinite}
+.card{position:relative;overflow:hidden;transition:transform .32s var(--ease-spring),box-shadow .32s ease,border-color .32s ease}.card:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(125deg,rgba(255,255,255,.8),transparent 26%);opacity:.55}.card:hover{transform:translateY(-5px);box-shadow:0 22px 55px rgba(23,59,84,.13)}
+.section{position:relative}.section:hover .num{transform:rotate(-6deg) scale(1.08)}.num{transition:transform .3s var(--ease-spring)}
+.chip,.productOption,.printBtn,.reset{position:relative;overflow:hidden}.chip:hover,.productOption:hover{transform:translateY(-3px) scale(1.025);box-shadow:0 8px 20px rgba(24,87,129,.11)}.chip.active{animation:chipSelect .42s var(--ease-spring);box-shadow:0 8px 22px rgba(24,87,129,.28)}
+.productSearchWrap:focus-within .searchIcon{animation:searchBounce .55s var(--ease-spring)}.productMenu:not(.hidden){transform-origin:top;animation:menuOpen .3s var(--ease-spring)}.selectedProduct.show{box-shadow:0 10px 28px rgba(169,207,56,.12)}
+.vialVisual{position:relative;overflow:hidden}.vialVisual:after{content:"";position:absolute;width:120px;height:26px;border-radius:50%;bottom:10px;background:radial-gradient(ellipse,rgba(24,87,129,.13),transparent 70%);animation:shadowPulse 3.2s ease-in-out infinite}.vialCap,.vialBottle{position:relative;z-index:1}.vialBottle{animation:vialHover 3.2s ease-in-out infinite;transform-origin:50% 85%}.vialBottle:after{content:"";position:absolute;left:8px;right:8px;bottom:8px;height:18px;border-radius:4px 4px 11px 11px;background:linear-gradient(180deg,rgba(169,207,56,.18),rgba(169,207,56,.38));animation:liquidWave 2.2s ease-in-out infinite;z-index:-1}
+.primary{position:relative;overflow:hidden;isolation:isolate}.primary:before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:rgba(169,207,56,.12);right:-110px;bottom:-130px;animation:resultOrb 5s ease-in-out infinite;z-index:-1}.primary strong{transition:transform .3s var(--ease-spring),text-shadow .3s}.primary:hover strong{transform:scale(1.055);text-shadow:0 8px 24px rgba(0,0,0,.18)}.resultPulse{animation:resultBoom .6s var(--ease-spring)!important}
+.status{position:relative}.status:not(:empty){animation:statusBreathe 2.6s ease-in-out infinite}
+.stat{transition:transform .25s var(--ease-spring),box-shadow .25s}.stat:hover{transform:translateY(-3px);box-shadow:0 9px 22px rgba(24,87,129,.09)}
+.syringeStage{position:relative;overflow:hidden}.syringeStage:before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 20%,rgba(169,207,56,.06),transparent 80%);transform:translateX(-100%);animation:stageScan 5s ease-in-out infinite}.syringe{position:relative;z-index:1;animation:syringeFloat 4s ease-in-out infinite}.fill{background:linear-gradient(90deg,#dff1a3,var(--green),#c9e969);background-size:200% 100%;animation:fillFlow 2s linear infinite!important}.doseMarker{filter:drop-shadow(0 4px 6px rgba(24,87,129,.25))}.doseMarker:before{animation:markerBreathe 1.6s ease-in-out infinite}
+.reset:hover,.printBtn:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 10px 24px rgba(24,87,129,.18)}
+.productCard{position:relative;overflow:hidden}.productCard:before{content:"";position:absolute;inset:-80% -40%;background:linear-gradient(110deg,transparent 42%,rgba(169,207,56,.10) 50%,transparent 58%);transform:translateX(-50%) rotate(8deg);transition:transform .7s ease}.productCard:hover:before{transform:translateX(45%) rotate(8deg)}.productCard:hover .vialIcon{animation:vialIconPop .55s var(--ease-spring)}
+.motion-ripple{position:absolute;border-radius:50%;pointer-events:none;background:rgba(255,255,255,.5);transform:translate(-50%,-50%) scale(0);animation:ripple .65s ease-out forwards}.numed-spark{position:fixed;z-index:9999;width:7px;height:7px;border-radius:50%;pointer-events:none;background:var(--green);animation:sparkFly .72s ease-out forwards}
+@keyframes ambientDriftA{50%{transform:translate(70px,-35px) scale(1.12)}}@keyframes ambientDriftB{50%{transform:translate(-80px,45px) scale(.92)}}@keyframes brandFloat{50%{transform:translateY(-4px)}}@keyframes heroEnter{from{opacity:0;transform:translateY(28px) scale(.975)}to{opacity:1;transform:none}}@keyframes orbFloat{50%{transform:translate(-35px,35px) scale(1.12)}}@keyframes heroSweep{0%,65%{transform:translateX(-120%) skewX(-18deg)}85%,100%{transform:translateX(780%) skewX(-18deg)}}@keyframes fadeSlide{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}@keyframes navDrop{from{opacity:0;transform:translateY(-14px) scale(.96)}to{opacity:1;transform:none}}@keyframes quickSweep{to{transform:translateX(140%)}}@keyframes stepEnter{from{opacity:0;transform:translateY(14px) scale(.95)}to{opacity:1;transform:none}}@keyframes activeStep{50%{transform:translateY(-2px);box-shadow:0 12px 30px rgba(24,87,129,.16)}}@keyframes donePop{40%{transform:scale(1.25) rotate(8deg)}}@keyframes arrowBreathe{50%{transform:translateX(3px);opacity:.55}}@keyframes chipSelect{45%{transform:scale(1.08)}}@keyframes searchBounce{45%{transform:translateY(-50%) scale(1.22) rotate(-8deg)}}@keyframes menuOpen{from{opacity:0;transform:translateY(-8px) scaleY(.94)}to{opacity:1;transform:none}}@keyframes vialHover{50%{transform:translateY(-7px) rotate(1deg)}}@keyframes shadowPulse{50%{transform:scale(.82);opacity:.55}}@keyframes liquidWave{50%{transform:skewY(-3deg) translateY(-2px)}}@keyframes resultOrb{50%{transform:translate(-25px,-18px) scale(1.15)}}@keyframes resultBoom{35%{transform:scale(1.11)}65%{transform:scale(.985)}100%{transform:scale(1)}}@keyframes statusBreathe{50%{box-shadow:0 0 0 6px rgba(169,207,56,.10)}}@keyframes stageScan{50%,100%{transform:translateX(120%)}}@keyframes syringeFloat{50%{transform:translateY(-2px)}}@keyframes fillFlow{to{background-position:200% 0}}@keyframes markerBreathe{50%{transform:translate(-50%,-100%) scale(1.07)}}@keyframes vialIconPop{45%{transform:translateY(-5px) rotate(-8deg) scale(1.18)}}@keyframes ripple{to{transform:translate(-50%,-50%) scale(8);opacity:0}}@keyframes sparkFly{to{transform:translate(var(--sx),var(--sy)) scale(.2);opacity:0}}
+@media(max-width:820px){.flowArrow{animation:none}.card:hover{transform:none}.shell:before{display:none}}
+@media(prefers-reduced-motion:reduce){body:before,body:after,.hero:before,.hero:after,.brand img,.flowStep,.flowArrow,.vialBottle,.vialVisual:after,.syringe,.fill,.status,.primary:before{animation:none!important}.numed-spark,.motion-ripple{display:none!important}}
+</style>
+
 </head>
 <body>
 <div class="shell">
@@ -73,5 +134,34 @@ function clearResults(){['unitsResult','concResult','doseResult','vialResult'].f
 document.getElementById('printResult').addEventListener('click',()=>window.print());
 document.getElementById('reset').onclick=()=>{state={dose:null,vial:null,water:null};document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));document.querySelectorAll('input').forEach(x=>x.value='');document.getElementById('error').textContent='';updateVial();clearResults()};
 </script>
+
+<script id="numed-motion-js">
+(()=>{
+ const flash=(el)=>{if(!el)return;el.classList.remove('motion-flash');void el.offsetWidth;el.classList.add('motion-flash');setTimeout(()=>el.classList.remove('motion-flash'),650)};
+ document.addEventListener('click',e=>{
+   const t=e.target.closest('button,.chip,.option,.product-card,.tab'); if(t) flash(t);
+ });
+ const obs=new MutationObserver(ms=>{for(const m of ms){if(m.type==='characterData'||m.type==='childList'){const el=m.target.nodeType===1?m.target:m.target.parentElement;if(el&&el.closest){const r=el.closest('.result-card,.resultHero,.hero-result');if(r) flash(r)}}}});
+ document.querySelectorAll('.result-card,.resultHero,.hero-result').forEach(el=>obs.observe(el,{subtree:true,childList:true,characterData:true}));
+ document.querySelectorAll('.card,.panel,.step,.product-card').forEach((el,i)=>el.style.animationDelay=Math.min(i*35,280)+'ms');
+})();
+</script>
+<script id="numed-motion-max-js">
+(()=>{
+ const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const shell=document.querySelector('.shell');
+ if(shell&&!reduce){
+   shell.addEventListener('pointermove',e=>{const r=shell.getBoundingClientRect();shell.style.setProperty('--mx',((e.clientX-r.left)/r.width*100).toFixed(1)+'%');shell.style.setProperty('--my',((e.clientY-r.top)/r.height*100).toFixed(1)+'%')},{passive:true});
+ }
+ document.addEventListener('pointerdown',e=>{
+   if(reduce)return; const el=e.target.closest('button,.chip,.productOption,.printBtn,.reset'); if(!el)return;
+   const r=el.getBoundingClientRect(),s=document.createElement('span');s.className='motion-ripple';s.style.left=(e.clientX-r.left)+'px';s.style.top=(e.clientY-r.top)+'px';s.style.width=s.style.height=Math.max(r.width,r.height)/3+'px';el.appendChild(s);setTimeout(()=>s.remove(),700);
+ });
+ const hero=document.getElementById('unitsHero'); let last='—';
+ const celebrate=()=>{if(reduce||!hero)return;const r=hero.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2;for(let i=0;i<12;i++){const p=document.createElement('i'),a=(Math.PI*2*i/12)+(Math.random()*.25),d=38+Math.random()*46;p.className='numed-spark';p.style.left=cx+'px';p.style.top=cy+'px';p.style.setProperty('--sx',Math.cos(a)*d+'px');p.style.setProperty('--sy',Math.sin(a)*d+'px');if(i%3===0)p.style.background='#185781';document.body.appendChild(p);setTimeout(()=>p.remove(),760)}};
+ if(hero){new MutationObserver(()=>{const now=hero.textContent.trim();if(now!==last&&now!=='—'&&now){last=now;celebrate()}else last=now}).observe(hero,{childList:true,characterData:true,subtree:true})}
+})();
+</script>
+
 </body>
 </html>
