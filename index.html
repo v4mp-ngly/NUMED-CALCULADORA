@@ -23,6 +23,31 @@
 
 /* NUMED Clinical Tools additions */
 .appNav{display:flex;gap:10px;justify-content:center;margin:18px auto 8px;position:sticky;top:10px;z-index:40}.appTab{border:1px solid #d8e4ec;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);color:#185781;padding:11px 18px;border-radius:14px;font:700 14px Montserrat,sans-serif;cursor:pointer;box-shadow:0 8px 24px rgba(24,87,129,.08);transition:.22s ease}.appTab:hover{transform:translateY(-2px)}.appTab.active{background:#185781;color:#fff;border-color:#185781}.toolView{animation:viewIn .32s ease}.toolView.hidden{display:none}.productPicker{margin-bottom:18px}.productSearchWrap{position:relative}.productSearch{width:100%;box-sizing:border-box;border:1.5px solid #d8e4ec;border-radius:16px;padding:15px 46px 15px 16px;font:600 15px Montserrat,sans-serif;outline:none;transition:.2s}.productSearch:focus{border-color:#185781;box-shadow:0 0 0 4px rgba(24,87,129,.09)}.searchIcon{position:absolute;right:16px;top:50%;transform:translateY(-50%);pointer-events:none}.productMenu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;max-height:250px;overflow:auto;margin-top:10px;padding:8px;border:1px solid #e1eaf0;border-radius:16px;background:#fff;box-shadow:0 18px 40px rgba(24,87,129,.12)}.productMenu.hidden{display:none}.productOption{border:1px solid #e5edf2;background:#fff;padding:11px 12px;border-radius:12px;text-align:left;font:650 13px Montserrat,sans-serif;color:#24475f;cursor:pointer;transition:.18s}.productOption:hover{border-color:#a9cf38;transform:translateY(-1px);background:#fbfdf6}.selectedProduct{display:none;margin-top:12px;padding:14px 16px;border-radius:16px;background:linear-gradient(135deg,#f5f9fc,#fbfdf6);border:1px solid #dce9ef;align-items:center;gap:12px}.selectedProduct.show{display:flex;animation:popIn .28s ease}.selectedProduct .check{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#a9cf38;color:#173d56;font-weight:900;animation:checkPop .38s ease}.selectedProduct small{display:block;color:#6b7f8d;margin-bottom:2px}.selectedProduct b{color:#185781}.libraryHeader{max-width:900px;margin:22px auto 14px;text-align:center}.libraryHeader h2{color:#185781;margin:0 0 6px}.libraryHeader p{color:#6b7f8d;margin:0}.librarySearch{max-width:720px;margin:18px auto}.libraryGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:1000px;margin:0 auto 40px}.productCard{background:#fff;border:1px solid #e2ebf0;border-radius:18px;padding:16px;box-shadow:0 8px 24px rgba(24,87,129,.06);transition:.22s;animation:cardIn .3s ease both}.productCard:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(24,87,129,.11);border-color:#cddfe9}.productCard .vialIcon{font-size:25px}.productCard h3{margin:8px 0 5px;color:#185781;font-size:15px}.productCard p{margin:0;color:#7b8c97;font-size:12px}.pendingBadge{display:inline-block;margin-top:12px;padding:6px 9px;border-radius:999px;background:#f1f6f8;color:#607985;font-size:10px;font-weight:800}.flowStep.done .stepDot{background:#a9cf38!important;color:#173d56!important;transform:scale(1.08)}.flowStep,.stepDot,.flowArrow{transition:.3s ease}.resultCard,.heroResult{transition:.28s ease}.resultPulse{animation:resultPulse .38s ease}.syringeFill,#fill,#doseMarker{transition:width .55s cubic-bezier(.2,.8,.2,1),left .55s cubic-bezier(.2,.8,.2,1),opacity .2s}.section{animation:sectionIn .4s ease both}@keyframes viewIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}@keyframes sectionIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes popIn{from{opacity:0;transform:scale(.97) translateY(5px)}to{opacity:1;transform:none}}@keyframes checkPop{0%{transform:scale(.4) rotate(-20deg)}70%{transform:scale(1.15)}100%{transform:scale(1)}}@keyframes cardIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}@keyframes resultPulse{50%{transform:scale(1.018)}}@media(max-width:760px){.appNav{top:6px}.appTab{flex:1;padding:10px 8px;font-size:12px}.productMenu{grid-template-columns:1fr}.libraryGrid{grid-template-columns:1fr 1fr}.productSearch{font-size:16px}}@media(max-width:480px){.libraryGrid{grid-template-columns:1fr}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* ===== JERINGA U-100 PREMIUM / COMPLETA ===== */
+.syringeStage{padding:34px 24px 14px!important;overflow:visible!important;background:linear-gradient(180deg,#fbfdfe 0%,#f2f7f9 100%)!important;box-shadow:inset 0 1px 0 #fff,0 10px 28px rgba(24,87,129,.06)}
+.syringe{height:118px!important;display:grid!important;grid-template-columns:22px 82px minmax(300px,1fr) 42px 150px;align-items:center;position:relative;max-width:100%;filter:drop-shadow(0 12px 10px rgba(37,68,86,.12));animation:syringeFloat 4s ease-in-out infinite}
+.thumbPad{grid-column:1;width:18px;height:72px;border:3px solid #8fa2ad;border-radius:8px;background:linear-gradient(90deg,#eef4f6,#fff 55%,#dce7eb);box-shadow:inset 2px 0 4px #fff,inset -2px 0 4px #cbd8de;z-index:3}
+.plungerRod{grid-column:2;height:16px;border:2px solid #9aacb5;border-left:0;background:linear-gradient(#fff,#dfe9ed,#fff);position:relative;z-index:2}
+.plungerRod:before,.plungerRod:after{content:"";position:absolute;left:0;right:0;height:2px;background:#c0cdd3}.plungerRod:before{top:-7px}.plungerRod:after{bottom:-7px}
+.plungerRod span{position:absolute;right:-7px;top:-13px;width:10px;height:38px;border-radius:3px;background:linear-gradient(90deg,#6f8089,#c0ccd1,#657780);box-shadow:0 0 0 1px #61737c}
+.barrel{grid-column:3;height:70px!important;min-width:0;border:3px solid #8fa2ad!important;border-radius:11px 14px 14px 11px!important;background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(238,246,248,.88) 52%,rgba(255,255,255,.96))!important;box-shadow:inset 0 8px 12px rgba(255,255,255,.9),inset 0 -7px 10px rgba(157,181,191,.18);overflow:visible!important;position:relative;z-index:4}
+.barrel:before{content:"U-100";position:absolute;right:12px;bottom:5px;font-size:8px;font-weight:900;letter-spacing:.08em;color:#77909d;opacity:.75}
+.barrelShine{position:absolute;left:3%;right:3%;top:5px;height:12px;border-radius:999px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.9),transparent);opacity:.85;pointer-events:none;z-index:6}
+.fill{top:4px!important;bottom:4px!important;left:3px!important;height:auto;border-radius:6px 0 0 6px!important;background:linear-gradient(90deg,rgba(213,239,119,.82),rgba(169,207,56,.88),rgba(203,231,105,.76))!important;box-shadow:inset 0 0 14px rgba(255,255,255,.55),0 0 12px rgba(169,207,56,.16);background-size:220% 100%!important;z-index:1}
+.fill:after{content:"";position:absolute;right:-3px;top:3px;bottom:3px;width:6px;border-radius:50%;background:rgba(153,194,35,.72);box-shadow:0 0 8px rgba(169,207,56,.45);animation:meniscus 1.8s ease-in-out infinite}
+.ticks{z-index:7!important}.tick{background:#415965!important;top:2px!important}.tick.five{height:21px!important}.tick.ten{height:29px!important}.tickLabel{top:37px!important;font-size:10px!important;color:#526a76!important}.doseMarker{top:-42px!important;bottom:-40px!important;z-index:12!important;width:2px!important;box-shadow:0 0 0 1px rgba(255,255,255,.6)}
+.doseMarker:before{font-size:12px!important;padding:7px 9px!important;border-radius:9px!important;box-shadow:0 7px 16px rgba(24,87,129,.24)!important}.doseMarker:after{top:-1px!important}
+.rubberStopper{position:absolute;right:4px;top:5px;bottom:5px;width:13px;border-radius:3px 7px 7px 3px;background:linear-gradient(90deg,#3d4b52,#76858c 45%,#303c42);box-shadow:inset 2px 0 2px rgba(255,255,255,.22);z-index:8}
+.needleHub{grid-column:4;width:42px!important;height:34px!important;clip-path:none!important;border:2px solid #80a99e;background:linear-gradient(90deg,#e5f5ef,#83cdb8 52%,#dff2ec)!important;border-radius:5px 12px 12px 5px;position:relative;z-index:3;box-shadow:inset 0 4px 5px rgba(255,255,255,.55)}
+.needleHub:before{content:"";position:absolute;left:-8px;top:7px;width:10px;height:16px;border:2px solid #9badb5;border-right:0;border-radius:4px 0 0 4px;background:#edf4f6}.needleHub span{position:absolute;right:-9px;top:8px;width:11px;height:14px;border-radius:0 5px 5px 0;background:linear-gradient(#70bca7,#c5eadf,#70bca7)}
+.needle{grid-column:5;width:150px!important;height:3px!important;background:linear-gradient(#d8e1e5,#6f818a,#eef4f6)!important;position:relative;z-index:2;transform-origin:left center;animation:needleGleam 2.8s ease-in-out infinite}
+.needle:before{content:"";position:absolute;left:0;right:5px;top:-1px;height:1px;background:rgba(255,255,255,.95)}.needle:after{right:-12px!important;top:-2px!important;border-left:13px solid #687b84!important;border-top:2px solid transparent!important;border-bottom:2px solid transparent!important}.needle span{position:absolute;left:15%;width:34%;height:1px;top:0;background:#fff;opacity:.8}
+.fingerFlange{position:absolute;left:98px;width:12px;height:94px;border:3px solid #91a4ae;background:linear-gradient(90deg,#e9f1f4,#fff,#dce7eb);border-radius:6px;z-index:5}.flangeTop{transform:translateY(-2px)}.flangeBottom{display:none}
+.scaleNote{margin-top:8px!important;font-size:11px!important}.syringeHead{font-size:14px!important}.syringeHead span:last-child{color:var(--blue);font-weight:900}
+@keyframes meniscus{50%{transform:scaleY(.88);filter:brightness(1.08)}}@keyframes needleGleam{0%,100%{filter:brightness(1)}50%{filter:brightness(1.18)}}
+@media(max-width:760px){.syringeStage{overflow-x:auto!important;padding:32px 18px 14px!important}.syringe{min-width:760px!important;grid-template-columns:22px 72px 420px 40px 145px}.fingerFlange{left:88px}.scaleNote{min-width:700px}}
+@media(prefers-reduced-motion:reduce){.needle,.fill:after{animation:none!important}}
 </style>
 
 <style id="numed-motion-upgrade">
@@ -85,6 +110,30 @@ body:after{width:420px;height:420px;right:-190px;top:48%;background:radial-gradi
 @media(prefers-reduced-motion:reduce){body:before,body:after,.hero:before,.hero:after,.brand img,.flowStep,.flowArrow,.vialBottle,.vialVisual:after,.syringe,.fill,.status,.primary:before{animation:none!important}.numed-spark,.motion-ripple{display:none!important}}
 </style>
 
+
+<style id="flow-steps-layout-fix">
+/* FIX: mantiene los 4 pasos y las 3 flechas en una sola fila */
+.flowSteps{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr) 34px minmax(0,1fr) 34px minmax(0,1fr);
+  align-items:center;
+  gap:10px;
+  width:100%;
+}
+.flowStep{min-width:0;width:100%;box-sizing:border-box;justify-content:flex-start}
+.flowArrow{width:34px;text-align:center;display:block}
+@media (max-width:900px) and (min-width:561px){
+  .flowSteps{grid-template-columns:minmax(0,1fr) 24px minmax(0,1fr) 24px minmax(0,1fr) 24px minmax(0,1fr);gap:6px}
+  .flowStep{padding:12px 10px;gap:8px;font-size:12px}
+  .flowStep .stepDot{width:30px;height:30px;flex-basis:30px}
+  .flowArrow{width:24px;font-size:19px}
+}
+@media (max-width:560px){
+  .flowSteps{display:flex;gap:6px;overflow:hidden}
+  .flowStep{flex:1;width:auto;padding:10px 8px;border-radius:14px;gap:6px;font-size:11px;justify-content:center;text-align:center}
+  .flowArrow{display:none}
+}
+</style>
 </head>
 <body>
 <div class="shell">
@@ -102,7 +151,7 @@ body:after{width:420px;height:420px;right:-190px;top:48%;background:radial-gradi
       <div class="primary"><small>Dosis calculada</small><strong id="unitsHero">—</strong><span class="mlBig" id="mlHero">— mL</span><span class="concBig" id="concHero">Concentración: —</span></div>
       <div class="stats"><div class="stat"><small>Jeringa U-100</small><b id="unitsResult">—</b></div><div class="stat"><small>Concentración</small><b id="concResult">—</b></div></div>
       <div class="stats"><div class="stat"><small>Dosis seleccionada</small><b id="doseResult">—</b></div><div class="stat"><small>Contenido del vial</small><b id="vialResult">—</b></div></div>
-      <div class="syringeWrap"><div class="syringeHead"><span>Jeringa U-100 · 1 mL</span><span id="drawText">Seleccione valores</span></div><div class="syringeStage"><div class="syringe"><div class="barrel"><div class="fill" id="fill"></div><div class="ticks" id="ticks"></div><div class="doseMarker" id="doseMarker" data-label=""></div></div><div class="plunger"></div><div class="needleHub"></div><div class="needle"></div></div><div class="scaleNote">Marcas pequeñas = 1 U · medianas = 5 U · numeradas = 10 U</div></div></div>
+      <div class="syringeWrap"><div class="syringeHead"><span>Jeringa U-100 · 1 mL</span><span id="drawText">Seleccione valores</span></div><div class="syringeStage"><div class="syringe"><div class="thumbPad"></div><div class="plungerRod"><span></span></div><div class="fingerFlange flangeTop"></div><div class="fingerFlange flangeBottom"></div><div class="barrel"><div class="barrelShine"></div><div class="fill" id="fill"></div><div class="ticks" id="ticks"></div><div class="doseMarker" id="doseMarker" data-label=""></div><div class="rubberStopper"></div></div><div class="needleHub"><span></span></div><div class="needle"><span></span></div></div><div class="scaleNote">Marcas pequeñas = 1 U · medianas = 5 U · numeradas = 10 U</div></div></div>
       <div class="error" id="error"></div>
       <div class="actionRow"><button class="printBtn" id="printResult" disabled>🖨️ Imprimir / guardar ficha</button><button class="reset" id="reset">Reiniciar cálculo</button></div>
       
