@@ -134,6 +134,42 @@ body:after{width:420px;height:420px;right:-190px;top:48%;background:radial-gradi
   .flowArrow{display:none}
 }
 </style>
+
+<style id="numed-syringe-fit-fix">
+/* Ajuste final: jeringa completa dentro de la tarjeta, sin recortes */
+.syringeStage{overflow:hidden!important;padding:38px 18px 16px!important}
+.syringe{width:100%!important;max-width:100%!important;min-width:0!important;height:126px!important;grid-template-columns:18px 58px minmax(0,1fr) 34px 92px!important;column-gap:0!important;transform:none!important}
+.thumbPad{width:16px!important;height:76px!important}
+.plungerRod{width:58px!important}
+.fingerFlange{left:70px!important;width:10px!important;height:96px!important}
+.barrel{width:100%!important;min-width:0!important;height:72px!important}
+.needleHub{width:34px!important;height:30px!important}
+.needle{width:92px!important;max-width:92px!important}
+.scaleNote{min-width:0!important;white-space:normal!important;padding:0 6px}
+@keyframes syringeFloatFit{0%,100%{translate:0 0}50%{translate:0 -3px}}
+.syringe{animation:syringeFloatFit 4s ease-in-out infinite!important}
+@media(max-width:760px){
+ .syringeStage{overflow:hidden!important;padding:36px 10px 14px!important}
+ .syringe{min-width:0!important;grid-template-columns:14px 40px minmax(0,1fr) 27px 58px!important;height:112px!important}
+ .thumbPad{width:13px!important;height:66px!important;border-width:2px!important}
+ .plungerRod{width:40px!important}
+ .fingerFlange{left:48px!important;width:8px!important;height:82px!important;border-width:2px!important}
+ .barrel{height:64px!important;border-width:2px!important}
+ .needleHub{width:27px!important;height:26px!important}
+ .needle{width:58px!important;max-width:58px!important}
+ .tickLabel{font-size:8px!important}
+ .doseMarker:before{font-size:10px!important;padding:6px 7px!important}
+ .scaleNote{font-size:9px!important}
+}
+@media(max-width:420px){
+ .syringe{grid-template-columns:12px 31px minmax(0,1fr) 23px 43px!important}
+ .plungerRod{width:31px!important}
+ .fingerFlange{left:37px!important}
+ .needleHub{width:23px!important}
+ .needle{width:43px!important;max-width:43px!important}
+}
+@media(prefers-reduced-motion:reduce){.syringe{animation:none!important}}
+</style>
 </head>
 <body>
 <div class="shell">
